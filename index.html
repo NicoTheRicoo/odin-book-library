@@ -13,22 +13,40 @@
                 <button id="addBtn">+</button>
                 <dialog id = "modal">
                     <label>Title
-                        <input type="text" id="title" name = "title" required>
+                        <input type="text" id="title" maxlength = "30" required>
                     </label>
                     <label>Author
-                        <input type="text" id="author" name = "author" required>
+                        <input type="text" id="author" maxlength = "30" required>
                     </label>
                     <label>Pages
-                        <input type="number" id="pages" name = "pages" required>
+                        <input type="number" id="pages" maxlength = "10" required>
                     </label>
                     <label>Read
-                        <input type="checkbox" id="read" name = "read" required>
+                        <input type="checkbox" id="read" required>
                     </label>
                     <div class="modal-buttons">
                         <button id = "submitBtn">Submit</button>
                         <button id = "cancelBtn">Cancel</button>
                     </div>
                 </dialog>
+            </div>
+            <div class="book" style = "background-color: rgb(211, 209, 86);">
+                <div class="book-title">The Way of Kings</div>
+                <div class="book-author">Brandon Sanderson</div>
+                <div class = "book-bottom">
+                    <div class="book-pages">1001 Pages</div>
+                    <label class = "read-label">Read<input class="readBtn" value = "Read" type = "checkbox"></input></label>
+                    <button class="book-remove">Remove book</button>
+                </div>
+            </div>
+            <div class="book" style = "background-color: rgb(86, 109, 211);">
+                <div class="book-title">Words of Radiance</div>
+                <div class="book-author">Brandon Sanderson</div>
+                <div class = "book-bottom">
+                    <div class="book-pages">1080 Pages</div>
+                    <label class = "read-label">Read<input class="readBtn" value = "Read" type = "checkbox"></input></label>
+                    <button class="book-remove">Remove book</button>
+                </div>
             </div>
         </div>
   </body>

@@ -7,29 +7,36 @@ const openModal = document.getElementById("addBtn").addEventListener("click", ()
     modal.showModal();
 });
 const submitModal = document.getElementById("submitBtn").addEventListener("click", () =>{
+    addPrompt();
     modal.close();
 });
 
 
 const mylibrary = [];
 
-function addPrompt(){
-    const t = "";
-    const a = "";
-    const p = "";
-    const r = "";
-}
-
 function book(title, author, pages, read){
     this.title = title;
     this.author = author; 
     this.pages = pages;
     this.read = read;
-    this.info = function(){
-        console.log(title + " by " + author + ", " + pages + ", " + read + ".");
-    }
 }
 
 function addBookToLibrary(){
+    let t = document.getElementById("title").value;
+    let a = document.getElementById("author").value;
+    let p = document.getElementById("pages").value;
+    let test = document.getElementById("read");
+    let r = "";
+    if (test.checked == true){
+        r = "read";
+    }else{
+        r = "not read"
+    }
+    
+    mylibrary.push(new book(t, a, p, r));   
+    visualLibraryUpdate();
+}
+
+function visualLibraryUpdate(){
     
 }
